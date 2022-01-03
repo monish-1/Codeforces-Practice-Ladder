@@ -17,6 +17,7 @@ using namespace std;
 
 int main()
 {
-    
-    return 0;
+    fast
+
+        return 0;
 }

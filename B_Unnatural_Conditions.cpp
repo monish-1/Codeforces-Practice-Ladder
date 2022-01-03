@@ -17,6 +17,10 @@ using namespace std;
 
 int main()
 {
-    
+    string a="",b="";
+    for(int i=0;i<1000;i++)
+    a+="4",b+="5";
+
+    cout<<a<<'5'<<xx<<b<<'5';
     return 0;
 }

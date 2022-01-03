@@ -17,6 +17,25 @@ using namespace std;
 
 int main()
 {
+    int n;
+    cin>>n;
+    int i=0;
+
+    while(i<n)
+    {
+        if(i+4<=n)
+        cout<<"aabb",i+=4;
+        else if(i+3<=n)
+        {
+            cout<<"aab";
+            i+=3;
+        }
+        else if(i+2<=n)
+        cout<<"aa",i+=2;
+        else
+        cout<<"a",i++;
+    }
     
+
     return 0;
 }

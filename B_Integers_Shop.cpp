@@ -17,6 +17,12 @@ using namespace std;
 
 int main()
 {
-    
+    fast 
+    int t;
+    cin >> t;
+    while (t--)
+    {
+        
+    }
     return 0;
 }

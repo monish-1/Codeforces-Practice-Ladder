@@ -17,6 +17,26 @@ using namespace std;
 
 int main()
 {
+    int n;
+    cin>>n;
+    int a[n];
+    int m=INT_MAX,idx=0;
+    for(int i=0;i<n;i++)
+    {
+        cin>>a[i];
+        if(a[i]<m)
+        idx=i,m=a[i];
     
+    }
+    int c=0;
+    for(int x:a)
+    {
+        if(x==m)
+        c++;
+    }
+    if(c>1)
+    cout<<"Still Rozdil";
+    else
+    cout<<idx+1;
     return 0;
 }

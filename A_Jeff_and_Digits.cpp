@@ -17,6 +17,32 @@ using namespace std;
 
 int main()
 {
-    
+    int n,zero=0,five=0;
+    cin>>n;
+    int a[n];
+    for(int i=0;i<n;i++)
+    {
+        cin>>a[i];
+        if(a[i]==0)
+        zero++;
+        else
+        five++;
+    }
+    if(zero==0)
+    cout<<-1;
+    else
+    {
+        five-=five%9;
+        bool f=false;
+        for(int i=0;i<five;i++)
+        cout<<5,f=true;
+        if(f==true)
+        for(int i=0;i<zero;i++)
+        cout<<0;
+        else
+        cout<<0;
+
+    }
+
     return 0;
 }

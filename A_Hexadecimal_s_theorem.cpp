@@ -17,6 +17,9 @@ using namespace std;
 
 int main()
 {
+    int n;
+    cin>>n;
     
+    cout<<n<<xx<<0<<xx<<0;
     return 0;
 }

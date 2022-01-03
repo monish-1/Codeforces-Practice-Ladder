@@ -17,6 +17,24 @@ using namespace std;
 
 int main()
 {
-    
+    int n;
+    cin>>n;
+    int a[n];
+    f(i,n)
+    cin>>a[i];
+
+    pair<int,int> ans;
+    int m=abs(a[n-1]-a[0]);
+    ans={1,n};
+    for(int i=1;i<n;i++)
+    {
+        if(m>abs(a[i]-a[i-1]))
+        {
+            m=abs(a[i]-a[i-1]);
+            ans={i,i+1};
+        }
+    }
+    cout<<ans.first<<xx<<ans.second;
+
     return 0;
 }
