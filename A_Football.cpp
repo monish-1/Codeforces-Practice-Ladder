@@ -18,16 +18,28 @@ using namespace std;
 int main()
 {
     int n;
-    cin>>n;
-    int a,b;
-    cin>>a>>b;
-    if(n-a-1<=b)
+    cin >> n;
+    string s;
+    map<string, int> m;
+    for (int i = 0; i < n; i++)
     {
-        cout<<n-a;
+        cin >> s;
+        m[s]++;
     }
+
+    auto it = m.begin();
+    if (n == 1)
+        cout << it->first;
     else
     {
-        cout<<b+1;
+        it++;
+        if (it->second > (m.begin()->second))
+        {
+            cout << it->first;
+        }
+        else
+            cout << m.begin()->first;
     }
+
     return 0;
 }

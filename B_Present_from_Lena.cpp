@@ -27,9 +27,18 @@ int main()
         for(int i=0;i<spaces;i++)
         cout<<xx;
         for(int i=0;i<=j;i++)
-        cout<<i<<xx;
+        {
+            cout<<i;
+            if(j!=0) 
+            cout<<xx;
+        }
+        
         for(int i=j-1;i>=0;i--)
-        cout<<i<<xx;
+        {
+            cout<<i;
+            if(i!=0)
+            cout<<xx;
+        }
         spaces-=2;
         cout<<endl;
     }
@@ -37,11 +46,24 @@ int main()
     for(int j=n-1;j>=0;j--)
     {
         for(int i=1;i<=spaces;i++)
-        cout<<xx;
+        {
+            cout<<xx;
+        }
+        
         for(int i=0;i<=j;i++)
-        cout<<i<<xx;
+        {
+            cout<<i;
+            if(j!=0)
+            cout<<xx;
+        }
+        
         for(int i=j-1;i>=0;i--)
-        cout<<i<<xx;
+        {
+            cout<<i;
+            if(i>0)
+            cout<<xx;
+        }
+        
         cout<<endl;
         spaces+=2;
     }
