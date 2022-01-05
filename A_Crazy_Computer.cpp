@@ -13,6 +13,19 @@ using namespace std;
 
 int main()
 {
-    
+    int n,c;
+    cin>>n>>c;
+    int a[n];
+    f(i,n)
+    cin>>a[i];
+    int ans=1,count=1;
+    for(int i=1;i<n;i++)
+    {
+        if(a[i]-a[i-1]<=c)
+        ans++;
+        else
+        ans=1;
+    }
+    cout<<ans;
     return 0;
 }
