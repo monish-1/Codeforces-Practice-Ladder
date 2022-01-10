@@ -17,6 +17,37 @@ using namespace std;
 
 int main()
 {
-    
-    return 0;
+    int n;
+    cin>>n;
+    int a[n];
+    int h[8]={};
+    f(i,n)
+    cin>>a[i],h[a[i]]++;
+    if(h[1]!=n/3 or (h[2]+h[3])!=n/3 or h[4]+h[6]!=n/3 or h[3]>h[6])
+    cout<<-1;
+    else
+    {
+        while(h[3]>0)
+        {
+            cout<<1<<xx<<3<<xx<<6<<endl;
+            h[3]--;
+            h[6]--;
+            h[1]--;
+        }
+        while(h[2]>0)
+        {
+            
+            cout<<1<<xx<<2<<xx;
+            if(h[6]>0)
+            {
+                cout<<6<<endl;
+                h[6]--;
+            }
+            else
+            cout<<4<<endl;
+            h[2]--;
+        }
+    }
+
+     return 0;
 }
