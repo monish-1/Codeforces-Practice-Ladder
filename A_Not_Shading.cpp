@@ -44,17 +44,6 @@ int main()
         cout<<0<<endl;
         else 
         {
-            
-            // for(int i=0;i<n;i++)
-            // {
-            //     if(a[i][c]=='B')
-            //     f=true;
-            // }
-            // for(int i=0;i<m;i++)
-            // {
-            //     if(a[r][i]=='B')
-            //     b=true;
-            // }
             if(f==true)
             cout<<1<<endl;
             else
