@@ -7,19 +7,16 @@ using namespace std;
 #define what_is(x) cerr << #x << " is " << x << endl;
 #define all(x) (x).begin(), (x).end()
 #define f(i, n) for (int i = 0; i < n; i++)
-#define w(x)  int x;cin >> x;while (x--)
-#define fast   ios_base::sync_with_stdio(false);  cin.tie(NULL);                     
-
-
+#define w(x)  \
+    int x;    \
+    cin >> x; \
+    while (x--)
+#define fast                          \
+    ios_base::sync_with_stdio(false); \
+    cin.tie(NULL);
 
 int main()
 {
-    int t;
-    cin>>t;
-    while(t--)
-    {
-        
-
-    }
+   
     return 0;
 }
