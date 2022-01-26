@@ -17,33 +17,37 @@ using namespace std;
 
 int main()
 {
-    
-    int n;
-    cin>>n;
-    for(int i=1;i<=2*n+1;i++)
+    int t;
+    cin>>t;
+    while(t--)
     {
-        int spaces= i<=n ? n-i+1 : i-n-1;
-        for(int s=0;s<spaces;s++)
-        cout<<xx<<xx;
-
-        int col=(abs(n+1-spaces));
-
-        for(int j=0;j<col;j++)
+        int n;
+        cin>>n;
+        vector<int> a(n),b(n);
+        int x;
+        for(int i=0;i<n;i++)
         {
-            if(j==0 and col==1)
-            cout<<j;
-            else
-            cout<<j<<xx;
+            cin>>x;
+            a[i]=x;
+            b[i]=x-i;
         }
-        
-        for(int j=col-2;j>=0;j--)
+
+        map<int,int> m;
+
+        for(int i=0;i<n;i++)
+        m[b[i]]++;
+
+        ll ans=0;
+
+        for(auto w:m)
         {
-            cout<<j;
-            if(j>0)
-            cout<<xx;
+            int d=w.second;
+            if(d>1)
+            ans+= 1LL*d*(d-1)/2;
         }
+        cout<<ans<<endl;
+
         
-        cout<<endl;
     }
     return 0;
 }
