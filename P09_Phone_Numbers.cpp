@@ -17,19 +17,20 @@ using namespace std;
 
 int main()
 {
-    int n,k;
-    cin>>n>>k;
-    int a[2*n+1];
-    for(int i=0;i<=2*n;i++)
+    int n;
+    cin>>n;
+    string s;
+    cin>>s;
+
+    int h[10]={};
+    for(int i=0;i<n;i++)
+    h[s[i]-'0']++;
+
+    if(h[8]<=n/11)
+    cout<<h[8];
+    else
     {
-        a[i]=i;
+        cout<<n/11;
     }
-   
-   for(int i=1;i<=k;i++)
-   {
-       swap(a[2*i-1],a[2*i]);
-   }
-    for(int i=1;i<=2*n;i++)
-    cout<<a[i]<<xx;
     return 0;
 }

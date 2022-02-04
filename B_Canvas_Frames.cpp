@@ -17,19 +17,25 @@ using namespace std;
 
 int main()
 {
-    int n,k;
-    cin>>n>>k;
-    int a[2*n+1];
-    for(int i=0;i<=2*n;i++)
-    {
-        a[i]=i;
-    }
+    int n;
+    cin>>n;
    
-   for(int i=1;i<=k;i++)
+   map<int,int> m;
+   
+   int x=0;
+   for(int i=0;i<n;i++)
    {
-       swap(a[2*i-1],a[2*i]);
+       cin>>x;
+       m[x]++;
    }
-    for(int i=1;i<=2*n;i++)
-    cout<<a[i]<<xx;
+    int count=0;
+   for(auto a:m)
+   {
+       count+=a.second/2;
+
+   }
+   cout<<count/2;
+
+
     return 0;
 }

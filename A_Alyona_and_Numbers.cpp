@@ -17,19 +17,26 @@ using namespace std;
 
 int main()
 {
-    int n,k;
-    cin>>n>>k;
-    int a[2*n+1];
-    for(int i=0;i<=2*n;i++)
+    int n,m;
+    cin>>n>>m;
+
+    ll a[5]={},b[5]={};
+    for(int i=1;i<=n;i++)
     {
-        a[i]=i;
+        a[i%5]++;
     }
-   
-   for(int i=1;i<=k;i++)
-   {
-       swap(a[2*i-1],a[2*i]);
-   }
-    for(int i=1;i<=2*n;i++)
-    cout<<a[i]<<xx;
+    for(int j=1;j<=m;j++)
+    {
+        b[j%5]++;
+    }
+
+    ll ans=0;
+    ans+=(a[0]*b[0]);
+    ans+=(a[1]*b[4]);
+    ans+=(a[2]*b[3]);
+    ans+=(a[3]*b[2]);
+    ans+=(a[4]*b[1]);
+
+    cout<<ans;
     return 0;
 }

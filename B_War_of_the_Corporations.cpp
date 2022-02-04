@@ -17,19 +17,21 @@ using namespace std;
 
 int main()
 {
-    int n,k;
-    cin>>n>>k;
-    int a[2*n+1];
-    for(int i=0;i<=2*n;i++)
+    string a,b;
+    cin>>a>>b;
+    int ans=0;
+
+    int n=a.size(),m=b.size();
+
+    int j=0;
+    for(int i=0;i<n;i++)
     {
-        a[i]=i;
+        if(a.substr(i,m)==b)
+        {
+            ans++;
+            i+=m-1;
+        }
     }
-   
-   for(int i=1;i<=k;i++)
-   {
-       swap(a[2*i-1],a[2*i]);
-   }
-    for(int i=1;i<=2*n;i++)
-    cout<<a[i]<<xx;
+    cout<<ans;
     return 0;
 }

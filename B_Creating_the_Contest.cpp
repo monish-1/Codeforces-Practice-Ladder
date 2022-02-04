@@ -8,7 +8,7 @@ using namespace std;
 #define all(x) (x).begin(), (x).end()
 #define f(i, n) for (int i = 0; i < n; i++)
 #define w(x)  \
-    int x;    \
+    long long x;    \
     cin >> x; \
     while (x--)
 #define fast                          \
@@ -17,19 +17,28 @@ using namespace std;
 
 int main()
 {
-    int n,k;
-    cin>>n>>k;
-    int a[2*n+1];
-    for(int i=0;i<=2*n;i++)
+    ll n;
+    cin>>n;
+    vector<ll> v(n);
+    for(ll &x:v)
+    cin>>x;
+
+    int ans=1;
+    for(int i=0;i<n;i++)
     {
-        a[i]=i;
+        
+
+        int j=i+1;
+        int c=1;
+        while(j<n and v[j]<=v[j-1]*2)
+        {
+            c++;
+            j++;
+        }
+        i=j-1;
+        ans=max(ans,c);
     }
-   
-   for(int i=1;i<=k;i++)
-   {
-       swap(a[2*i-1],a[2*i]);
-   }
-    for(int i=1;i<=2*n;i++)
-    cout<<a[i]<<xx;
+
+    cout<<ans;
     return 0;
 }

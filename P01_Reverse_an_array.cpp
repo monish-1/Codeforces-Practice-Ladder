@@ -17,19 +17,16 @@ using namespace std;
 
 int main()
 {
-    int n,k;
-    cin>>n>>k;
-    int a[2*n+1];
-    for(int i=0;i<=2*n;i++)
-    {
-        a[i]=i;
-    }
-   
-   for(int i=1;i<=k;i++)
-   {
-       swap(a[2*i-1],a[2*i]);
-   }
-    for(int i=1;i<=2*n;i++)
-    cout<<a[i]<<xx;
+    int n;
+    cin>>n;
+    vector<int> a(n);
+    for(int &x:a)
+    cin>>x;
+
+    reverse(all(a));
+
+    for(int x:a)
+    cout<<x<<xx;
+    
     return 0;
 }
